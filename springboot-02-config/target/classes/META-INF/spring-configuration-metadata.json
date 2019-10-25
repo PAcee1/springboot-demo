@@ -1,0 +1,43 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.enbuys.springboot.Entity.Person",
+      "name": "person",
+      "type": "com.enbuys.springboot.Entity.Person"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.enbuys.springboot.Entity.Person",
+      "name": "person.birth",
+      "type": "java.util.Date"
+    },
+    {
+      "sourceType": "com.enbuys.springboot.Entity.Person",
+      "name": "person.dog",
+      "type": "com.enbuys.springboot.Entity.Dog"
+    },
+    {
+      "sourceType": "com.enbuys.springboot.Entity.Person",
+      "name": "person.list",
+      "type": "java.util.List<java.lang.Object>"
+    },
+    {
+      "sourceType": "com.enbuys.springboot.Entity.Person",
+      "name": "person.map",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>"
+    },
+    {
+      "sourceType": "com.enbuys.springboot.Entity.Person",
+      "defaultValue": 0,
+      "name": "person.p-age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.enbuys.springboot.Entity.Person",
+      "name": "person.p-name",
+      "type": "java.lang.String"
+    }
+  ]
+}
