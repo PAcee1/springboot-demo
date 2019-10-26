@@ -1,5 +1,6 @@
 package com.enbuys.springboot.controller;
 
+import com.enbuys.springboot.exception.UserNotExistException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,5 +19,10 @@ public class HelloController {
     public String success(Map<String,Object> map){
         map.put("hello","你好，Thymeleaf");
         return "success";
+    }
+
+    @RequestMapping("hello")
+    public String hello(Map<String,Object> map){
+        throw new UserNotExistException();
     }
 }

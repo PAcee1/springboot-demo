@@ -29,11 +29,11 @@ public class MyMvcConfig{
                 registry.addViewController("/main.html").setViewName("dashboard");
             }
 
-            @Override
+            /*@Override
             public void addInterceptors(InterceptorRegistry registry) {
                 registry.addInterceptor(new MyHandlerInterceptor()).addPathPatterns("/**")
                             .excludePathPatterns("/index.html","/","/user/login");
-            }
+            }*/
         };
     }
 
