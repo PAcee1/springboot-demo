@@ -1,12 +1,11 @@
 package com.enbuys.springboot.config;
 
-import com.enbuys.springboot.component.MyHandlerInterceptor;
 import com.enbuys.springboot.component.MyLocaleResolver;
+import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
+import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -18,6 +17,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 //@EnableWebMvc
 @Configuration
 public class MyMvcConfig{
+
+    @Bean
+    public EmbeddedServletContainerCustomizer embeddedServletContainerFactory(){
+        return new EmbeddedServletContainerCustomizer() {
+            @Override
+            public void customize(ConfigurableEmbeddedServletContainer container) {
+                container.setPort(8081);
+            }
+        };
+    }
 
     @Bean
     public WebMvcConfigurerAdapter webMvcConfigurerAdapter(){
