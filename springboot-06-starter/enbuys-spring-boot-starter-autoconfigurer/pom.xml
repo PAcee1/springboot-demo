@@ -8,10 +8,10 @@
         <version>2.2.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.enbuys</groupId>
-    <artifactId>springboot-05-jpa</artifactId>
+    <groupId>com.enbuys.test</groupId>
+    <artifactId>enbuys-spring-boot-starter-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-05-jpa</name>
+    <name>enbuys-spring-boot-starter-test</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -21,22 +21,21 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
