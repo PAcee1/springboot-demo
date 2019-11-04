@@ -36,4 +36,11 @@ public class EmpController {
         return "success";
     }
 
+<<<<<<< HEAD
+=======
+    @GetMapping("emp/lastName/{name}")
+    public Employee getByLastName(@PathVariable("name") String name){
+        return empService.getBylastName(name);
+    }
+>>>>>>> 09d9fb1b4290a3346bba2060665da023b393567a
 }

@@ -16,6 +16,9 @@ public interface EmployeeDao {
     @Select("select * from employee where id = #{id}")
     public Employee getById(Integer id);
 
+    @Select("select * from employee where lastName = #{lastName}")
+    public Employee getBylastName(String lastName);
+
     @Insert("insert into employee(lastName,email,gender,d_id) values(#{lastName},#{email},#{gender},#{dId})")
     public void insert(Employee employee);
 
