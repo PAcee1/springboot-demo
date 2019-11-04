@@ -35,4 +35,5 @@ public class EmpController {
         empService.deleteById(id);
         return "success";
     }
+
 }
